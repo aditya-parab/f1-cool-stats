@@ -13,8 +13,8 @@ This is my React Progressive Web App (PWA) for the average Formula 1 lover.  Get
 
 * Frontend: ReactJS
 * Data Fetching: Axios
-* UI Framework (Optional): undecided
-* WebSockets (Optional): Socket.IO library / undecided
+* UI Framework: undecided
+* WebSockets: Socket.IO library / undecided
 * Deployment Platform: Vercel
 
 
