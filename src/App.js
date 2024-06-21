@@ -7,7 +7,9 @@ function App() {
       <header className="App-header">
         {/* ... rest of your header content */}
       </header>
-      <PastRaces />  
+
+      <PastRaces />
+      <UpcomingRaces />  
     </div>
   );
 }
