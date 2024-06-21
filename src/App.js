@@ -1,3 +1,4 @@
+import PastRaces from './PastRaces';
 import UpcomingRaces from './UpcomingRaces';  // Assuming UpcomingRaces.js is in the same directory
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
       <header className="App-header">
         {/* ... rest of your header content */}
       </header>
-      <UpcomingRaces />  {/* Render the UpcomingRaces component */}
+      <PastRaces />  
     </div>
   );
 }

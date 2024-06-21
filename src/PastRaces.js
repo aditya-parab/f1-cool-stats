@@ -16,9 +16,9 @@ function PastRaces() {
 
       // Filter past races based on date
       const filteredRaces = response.data?.MRData?.RaceTable?.Races?.filter(
-        (race) => race.date < today
+        (race) => race.date <= today
       );
-
+      console.log(response.data?.MRData?.RaceTable?.Races);
       setPastRaces(filteredRaces || []);
     } catch (error) {
       console.error("Error fetching past races:", error);
@@ -31,9 +31,17 @@ function PastRaces() {
     fetchPastRaces();
   }, []);
 
+  function handleRefresh() {
+    
+    fetchPastRaces();
+  }
+
   return (
     <div>
       <h2>Past Races</h2>
+      <button onClick={handleRefresh} disabled={isLoading}>
+        {isLoading ? "Refreshing..." : "Refresh Races"}
+      </button>
       {isLoading ? (
         <div className="loading">Loading past races...</div>
       ) : pastRaces.length > 0 ? (
