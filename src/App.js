@@ -1,5 +1,6 @@
 import PastRaces from './PastRaces';
 import UpcomingRaces from './UpcomingRaces';  // Assuming UpcomingRaces.js is in the same directory
+import CurrentStandings from './CurrentStandings';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       </header>
 
       <PastRaces />
-      <UpcomingRaces />  
+      <UpcomingRaces />
+      <CurrentStandings/>  
     </div>
   );
 }

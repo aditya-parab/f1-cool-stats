@@ -13,10 +13,12 @@ function PastRaces() {
 
       const response = await axios.get(url);
       const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+      console.log(today);
 
       // Filter past races based on date
       const filteredRaces = response.data?.MRData?.RaceTable?.Races?.filter(
-        (race) => race.date <= today
+        (race) => race.date < today
+        
       );
       console.log(response.data?.MRData?.RaceTable?.Races);
       setPastRaces(filteredRaces || []);
