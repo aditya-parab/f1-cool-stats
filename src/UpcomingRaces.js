@@ -36,14 +36,14 @@ function UpcomingRaces() {
       {isLoading ? (
         <div className="loading">Loading upcoming races...</div>
       ) : races.length > 0 ? (
-        <ul>
+        <ol>
           {races.map((race) => (
             <li key={race.round}>
               {/* Optional chaining for nested properties */}
               {race.raceName} - {race.Circuit?.circuitName || "Circuit name not available"} ({race.date})
             </li>
           ))}
-        </ul>
+        </ol>
       ) : (
         <p>No upcoming races found.</p>
       )}
