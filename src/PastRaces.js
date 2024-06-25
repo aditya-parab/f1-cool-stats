@@ -55,7 +55,7 @@ function PastRaces() {
         <ol>
           {/* Map over pastRaces and display details */}
           {pastRaces.map((race) => (
-            <li key={race.circuit_key}>
+            <li key={race.round}>
               {/* Display race details (e.g., race name, date, winner) */}
               {race.raceName} : {race.Results[0].Driver.familyName}
               
